@@ -1,3 +1,5 @@
+#include <iostream>
+
 #include "search.h"
 
 namespace algorithm_fundamental
@@ -5,11 +7,13 @@ namespace algorithm_fundamental
   int binarysearch(int array[], int key)
   {
     int low = 0;
-    int high = sizeof(array)/sizeof(array[0]);
+    // Yes, this doesn't give you what you're looking for
+    //int high = sizeof(array)/sizeof(array[0]);
+    int high = sizeof(array);
 
     while (low <= high) 
     {
-      int mid = low + ((low+high)/2);
+      int mid = low + ((high-low)/2);
 
       if (array[mid] > key) 
       {
