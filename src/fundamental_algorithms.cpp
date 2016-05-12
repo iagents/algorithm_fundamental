@@ -32,6 +32,7 @@ namespace algorithm_fundamental
       while (temp > 0)
       {
 	// find the index
+	// odd and even 
 	int j = (i < n/2) ? 2*i+1 : 2*(n-1-i);
 
 	if (i == j)
