@@ -22,4 +22,37 @@ namespace algorithm_fundamental
 
     return diff;
   }
+
+  void rearrange_array_max_min(int array[], int n)
+  {
+    for (int i=0; i < n; i++)
+    {
+      int temp = array[i];
+
+      while (temp > 0)
+      {
+	// find the index
+	int j = (i < n/2) ? 2*i+1 : 2*(n-1-i);
+
+	if (i == j)
+	{
+	  array[i] = -temp;
+	  break;
+	}
+
+	int s = temp;
+	temp = array[j];
+	array[j] = s;
+
+	array[j] = -array[j];
+
+	i = j;
+      }
+    }
+
+    for (int i=0; i < n; i++)
+    {
+      array[i] = -array[i];
+    }
+  }
 }
