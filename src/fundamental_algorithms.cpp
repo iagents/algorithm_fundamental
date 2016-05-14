@@ -56,4 +56,14 @@ namespace algorithm_fundamental
       array[i] = -array[i];
     }
   }
+
+  int fibonacci_series(int n)
+  {
+    if (n <= 1)
+    {
+      return 1;
+    }
+
+    return (fibonacci_series(n-1) + fibonacci_series(n-2));
+  }
 }

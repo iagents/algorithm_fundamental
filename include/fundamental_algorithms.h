@@ -13,4 +13,9 @@ namespace algorithm_fundamental
   /// \param[in] array an array of integers
   /// \param[in] n size of the input array
   void rearrange_array_max_min(int array[], int n);
+
+  /// \brief Return the fibonacci series of the given number
+  /// \param[in] n input integer
+  /// \return Return the fibonacci series of the given number
+  int fibonacci_series(int n);
 } // algorithm_fundamental
