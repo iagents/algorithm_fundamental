@@ -66,4 +66,27 @@ namespace algorithm_fundamental
 
     return (fibonacci_series(n-1) + fibonacci_series(n-2));
   }
+
+  int find_increasing_subarrays(int array[], int n)
+  {
+    int cnt = 0;
+
+    for (int i=0; i < n; ++i)
+    {
+      for (int j=i+1; j < n; ++j)
+      {
+	// If a subarray, array[i..j] is not strictly increasing, then
+	// subarrays after that array, i.e., array[i..j+1],
+	// array[i..j+2]... can't be strictly increasing.
+	if(array[j] > array[j-1])
+	{
+	  cnt++;
+	} else
+	{
+	  break;
+	}
+      }
+    }
+    return cnt;
+  }
 }

@@ -18,4 +18,12 @@ namespace algorithm_fundamental
   /// \param[in] n input integer
   /// \return Return the fibonacci series of the given number
   int fibonacci_series(int n);
+
+  /// \brief Count the number of all increasing subarrays from an input array
+  /// e.g.) { 1, 2, 3, 4 }
+  /// - {1, 2}, {1, 2, 3}, {1, 2, 3, 4}, {2, 3}, {2, 3, 4}, {3, 4}
+  /// \param[in] array an array of integer
+  /// \param[in] n the size of the input array
+  /// \return Return the number of all increasing subarrays from an input array
+  int find_increasing_subarrays(int array[], int n);
 } // algorithm_fundamental
