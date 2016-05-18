@@ -26,4 +26,8 @@ namespace algorithm_fundamental
   /// \param[in] n the size of the input array
   /// \return Return the number of all increasing subarrays from an input array
   int find_increasing_subarrays(int array[], int n);
+
+  /// \brief Merge two sorted arrays into two arrays of which sizes
+  /// are the same as those of the input arrays. The size of the extra space is O(1).
+  void merge(int array1[], int array2[], int m, int n);
 } // algorithm_fundamental

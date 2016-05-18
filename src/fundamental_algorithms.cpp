@@ -89,4 +89,22 @@ namespace algorithm_fundamental
     }
     return cnt;
   }
+
+  void merge(int array1[], int array2[], int m, int n)
+  {
+    for (int i=n-1; i >= 0; i--)
+    {
+      int j, last = array1[m-1];
+      for (j=m-1; j >= 0 && array1[j] > array2[i]; j--)
+      {
+	array1[j+1] = array1[j];
+      }
+
+      if (j != m-1)
+      {
+	array1[j+1] = array2[i];
+	array2[i] = last;
+      }
+    }
+  }
 }
