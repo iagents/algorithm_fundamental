@@ -107,4 +107,37 @@ namespace algorithm_fundamental
       }
     }
   }
+
+  int factorial(int n)
+  {
+    if (n != 1) {
+      return n*factorial(n-1);
+    }
+  }
+
+  void calcCombination(int array[], int n, int r)
+  {
+    int data[r];
+    combination(array, data, 0, n-1, 0, r);
+  }
+
+  void combination(int array[], int data[], int start, int end, int index, int r)
+  {
+    if (index == r)
+    {
+      for (int jj=0; jj < r; jj++)
+      {
+	std::cout << data[jj] << " ";
+      }
+      std::cout << std::endl;
+
+      return;
+    }
+
+    for( int ii=start; ii <= end && end-ii+1 >= r-index; ii++ )
+    {
+      data[index] = array[ii];
+      combination( array, data, ii+1, end, index+1, r );
+    }
+  }
 }

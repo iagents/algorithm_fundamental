@@ -1,3 +1,5 @@
+#include <iostream>
+
 namespace algorithm_fundamental
 {
   /// \brief Given an array, find the minimum difference between elements.
@@ -30,4 +32,13 @@ namespace algorithm_fundamental
   /// \brief Merge two sorted arrays into two arrays of which sizes
   /// are the same as those of the input arrays. The size of the extra space is O(1).
   void merge(int array1[], int array2[], int m, int n);
+
+  /// \brief Compute factorial(n)
+  /// A recursive implementation of computing factorial of a given number, n.
+  int factorial(int n);
+
+  /// \brief Calculate the combination of r from n, e.g.) nCr
+  void calcCombination(int array[], int n, int r);
+
+  void combination(int array[], int data[], int start, int end, int index, int r);
 } // algorithm_fundamental
