@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 namespace algorithm_fundamental
 {
@@ -41,4 +42,19 @@ namespace algorithm_fundamental
   void calcCombination(int array[], int n, int r);
 
   void combination(int array[], int data[], int start, int end, int index, int r);
+
+  /// \brief Find the subarray of size k that its sum is the minimum
+  /// of all subarrays. Here a subarray is a part of the input array that
+  /// its components must be continguous.
+  /// \param[in] array input array of integers
+  /// \param[in] n the size of the input array
+  /// \param[in] k the size of the subarray
+  void find_min_sum_subarray(int array[], int n, int k);
+
+  /// \brief Generate an anagram of the input string
+  /// \param[in] str input string
+  /// \param[in] index the current index of character in the input string
+  void generate_anagram(std::string & str, int index);
+
+  void swap(char & a, char & b);
 } // algorithm_fundamental

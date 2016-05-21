@@ -110,9 +110,9 @@ namespace algorithm_fundamental
 
   int factorial(int n)
   {
-    if (n != 1) {
-      return n*factorial(n-1);
-    }
+    if (n <=1) return 1;
+
+    return n*factorial(n-1);
   }
 
   void calcCombination(int array[], int n, int r)
@@ -139,5 +139,65 @@ namespace algorithm_fundamental
       data[index] = array[ii];
       combination( array, data, ii+1, end, index+1, r );
     }
+  }
+
+  void find_min_sum_subarray(int array[], int n, int k)
+  {
+    // n must be greater than k
+    if ( n < k )
+    {
+      return;
+    }
+
+    // Initialize the beginning index of the resulting subarray
+    int res_index = 0;
+
+    // Compute the sum of subarray
+    int sum = 0;
+    for (int i=0; i < k; i++)
+    {
+      sum += array[i];
+    }
+
+    int min_sum = sum;
+
+    // Iterate from (k+1)th element to nth element
+    for (int i=k; i < n; i++)
+    {
+      // Add current item, (k+1), and remove the first item from the
+      // previous subarray
+      sum += array[i]-array[i-k];
+
+      if(sum < min_sum)
+      {
+	min_sum = sum;
+	res_index = (i-k+1);
+      }
+    }
+
+    std::cout << "Subarray between [" << res_index 
+	      << ", " << res_index+k-1 << "] has minimum sum!" << std::endl;
+  }
+
+  void generate_anagram(std::string & str, int index)
+  {
+    if( index == str.length() )
+    {
+      std::cout << str << std::endl;
+    }
+
+    for (int i=index; i < str.length(); i++)
+    {
+      swap( str[index], str[i] );
+      generate_anagram( str, index+1 );
+      swap( str[index], str[i] );
+    }
+  }
+
+  void swap(char & a, char & b)
+  {
+    char tmp = a;
+    a = b;
+    b = tmp;
   }
 }
