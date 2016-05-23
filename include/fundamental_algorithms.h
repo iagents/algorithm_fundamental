@@ -1,5 +1,7 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
+#include <vector>
 
 namespace algorithm_fundamental
 {
@@ -57,4 +59,23 @@ namespace algorithm_fundamental
   void generate_anagram(std::string & str, int index);
 
   void swap(char & a, char & b);
+
+  /// \brief Rearrange the order of numbers in the string format to
+  /// find the biggest number
+  /// \param[in] array input array of integers in the string format.
+  void find_biggest_number_order(std::vector<std::string> array);
+
+  int compare_number_in_string(std::string x, std::string y);
+
+  void print_elements(const std::string & element);
+
+  /// \brief Find the minimum number of jumps to reach the end of the
+  /// array, starting from the first element. Each element of the given
+  /// array represents the maximum number of steps that can go forward from
+  /// that element. If an element has 0, it cannot move through the element.
+  /// e.g.) arr[] = { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 }
+  /// Output: 3 (1 -> 3 -> 8 -> 9)
+  /// First element has 1, so it can only go to 3. The second element
+  /// is 3, so can make at most 3 steps, from 5 to 9
+  int find_min_hopping(int array[], int l, int h);
 } // algorithm_fundamental

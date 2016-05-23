@@ -4,7 +4,7 @@
 
 namespace algorithm_fundamental
 {
-  int binarysearch(int array[], int key)
+  int binary_search(int array[], int key)
   {
     int low = 0;
     // Yes, this doesn't give you what you're looking for
@@ -17,7 +17,7 @@ namespace algorithm_fundamental
 
       if (array[mid] > key) 
       {
-	high = mid - 1;
+        high = mid - 1;
       } else if (array[mid] < key)
       {
 	low = mid + 1;

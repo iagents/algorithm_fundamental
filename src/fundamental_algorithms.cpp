@@ -200,4 +200,49 @@ namespace algorithm_fundamental
     a = b;
     b = tmp;
   }
+
+  void find_biggest_number_order(std::vector<std::string> array)
+  {
+    sort(array.begin(), array.end(), compare_number_in_string);
+    for_each(array.begin(), array.end(), print_elements);    
+  }
+
+  int compare_number_in_string(std::string x, std::string y)
+  {
+    std::string xy = x.append(y);
+    std::string yx = y.append(x);
+
+    return xy.compare(yx) > 0 ? 1 : 0;
+  }
+
+  void print_elements(const std::string & element)
+  {
+    std::cout << element << " ";
+  }
+
+  int find_min_hopping(int array[], int l, int h)
+  {
+    if (l == h)
+    {
+      return 0;
+    }
+
+    if (array[l] == 0)
+    {
+      return INT_MAX;
+    }
+
+    int min = INT_MAX;
+
+    for (int i=l+1; i <= h && i <= array[l]+l; i++)
+    {
+      int hops = find_min_hopping(array, i, h);
+      if (hops != INT_MAX && hops+1 < min)
+      {
+	min = hops+1;
+      }
+    }
+
+    return min;
+  }
 }

@@ -2,6 +2,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 PROJECT(FA)
 
+#enable_testing()
+
 INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/include)
 
 #ADD_EXECUTABLE(fa_demo src/main.cpp src/search.cpp)
@@ -12,4 +14,10 @@ INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/include)
 #ADD_EXECUTABLE(print_combination src/printCombination.cpp src/fundamental_algorithms.cpp)
 #ADD_EXECUTABLE(test_bitwise_operators src/testBitwiseOperators.cpp src/bitwise_operators.cpp)
 #ADD_EXECUTABLE(test_find_min_sum_subarray src/findMinSumSubarray.cpp src/fundamental_algorithms.cpp)
-ADD_EXECUTABLE(test_anagram_generate src/testGenerateAnagram.cpp src/fundamental_algorithms.cpp)
+#ADD_EXECUTABLE(test_anagram_generate src/testGenerateAnagram.cpp src/fundamental_algorithms.cpp)
+#ADD_EXECUTABLE(test_find_biggest_number src/testFindBiggestNumber.cpp src/fundamental_algorithms.cpp)
+#ADD_EXECUTABLE(test_find_min_hopping src/testFindMinHopping.cpp src/fundamental_algorithms.cpp)
+#ADD_EXECUTABLE(test_bucket_sort src/testBucketSort.cpp src/sort.cpp)
+ADD_EXECUTABLE(test_ccg src/testCCG.cpp src/connected_component_analysis.cpp)
+
+#add_test(findBiggestNumber find_biggest_number_test) 
