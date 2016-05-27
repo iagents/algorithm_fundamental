@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 
-#include "sort.h"
+#include "sorting_algorithms.h"
 
 void print_element(float element){ std::cout << element << " "; }
 
@@ -15,7 +15,7 @@ int main()
   
   std::cout << "Input array: " << std::endl;
   for_each( vec.begin(), vec.end(), print_element );
-  algorithm_fundamental::bucket_sort(arr, n);
+  algorithm_fundamental::sorting_algorithms::bucket_sort(arr, n);
   //vec.clear();
   //copy( arr, arr+n, vec.begin() );
   std::cout << std::endl << "Sorted array: " << std::endl;

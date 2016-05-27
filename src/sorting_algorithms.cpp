@@ -1,7 +1,8 @@
-#include "sort.h"
+#include "sorting_algorithms.h"
 
-namespace algorithm_fundamental
-{
+namespace algorithm_fundamental {
+namespace sorting_algorithms {
+
   // \todo{Need to modify this to make a template
   void bucket_sort(float array[], int n)
   {
@@ -70,4 +71,6 @@ namespace algorithm_fundamental
       quick_sort(array, i, right);
     }
   }
-}
+
+} // namespace sorting_algorithms
+} // namespace algorithm_fundamental

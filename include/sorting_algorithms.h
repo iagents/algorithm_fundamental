@@ -1,12 +1,14 @@
-#ifndef _SORT_H__
-#define _SORT_H__
+#ifndef _SORTING_ALGORITHMS_H__
+#define _SORTING_ALGORITHMS_H__
 
 #include <iostream>
 #include <algorithm>
 #include <vector>
 
-namespace  algorithm_fundamental
-{
+namespace algorithm_fundamental {
+namespace sorting_algorithms {
+  /// \todo{Need to make these as templates}		
+
   /// \brief An implementation of bucket sort
   /// \param[in] array Input array of floating point numbers
   /// \param[in] n Size of the input array
@@ -17,6 +19,8 @@ namespace  algorithm_fundamental
   /// \param[in] left left index
   /// \param[in] right right index
   void quick_sort(int array[], int left, int right);
+
+} // namespace sorting_algorithms
 } // namespace algorithm_fundamental
 
 #endif
