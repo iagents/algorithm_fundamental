@@ -27,8 +27,12 @@ namespace algorithm_fundamental
 
 	void ccg(int **data, int **label, int r, int rn, int c, int cn, int current_label)
 	{
+		// Return if one of the following conditions is true:
+		// 1) Either row or column index is out of bound,
+		// 2) There is alreay a label assigned  to the coordinate, (r,c) of interest, or data matrix is empty 
 		if (is_out_of_bound(r, rn)) return;
 		if (is_out_of_bound(c, cn)) return;
+		if ( label[r][c] || !data[r][c] ) return;
 
 		label[r][c] = current_label;
 		int num_neighbors = 4;
