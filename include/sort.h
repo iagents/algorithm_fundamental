@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <vector>
 
-
 namespace  algorithm_fundamental
 {
   /// \brief An implementation of bucket sort

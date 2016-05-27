@@ -1,10 +1,14 @@
 # An implementation of fundamental algorithms
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.7)
+
 PROJECT(FA)
 
-#enable_testing()
+enable_testing()
 
 INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/include)
+#INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/src)
+
+add_subdirectory(test)
 
 #ADD_EXECUTABLE(fa_demo src/main.cpp src/search.cpp)
 #ADD_EXECUTABLE(find_min_diff src/findMinDifference.cpp src/fundamental_algorithms.cpp)
@@ -19,6 +23,9 @@ INCLUDE_DIRECTORIES(BEFORE ${PROJECT_SOURCE_DIR}/include)
 #ADD_EXECUTABLE(test_find_min_hopping src/testFindMinHopping.cpp src/fundamental_algorithms.cpp)
 #ADD_EXECUTABLE(test_bucket_sort src/testBucketSort.cpp src/sort.cpp)
 #ADD_EXECUTABLE(test_ccg src/testCCG.cpp src/connected_component_analysis.cpp)
-ADD_EXECUTABLE(test_quick_sort src/testQuickSort.cpp src/sort.cpp)
+#ADD_EXECUTABLE(test_quick_sort src/testQuickSort.cpp src/sort.cpp)
+#ADD_EXECUTABLE(test_linear_least_square_fit src/testLinearLeastSquareFit.cpp src/numerical_algorithms.cpp)
+#ADD_EXECUTABLE(test_linear_least_square_fit src/testLinearLeastSquareFit.cpp src/numerical_algorithms.cpp)
+ADD_EXECUTABLE(test_string_manipulator src/testStringManipulation.cpp src/string_manipulation_algorithms.cpp)
 
 #add_test(findBiggestNumber find_biggest_number_test) 
