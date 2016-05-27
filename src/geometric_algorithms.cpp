@@ -1,4 +1,4 @@
-#include "connected_component_analysis.h"
+#include "geometric_algorithms.h"
 
 namespace algorithm_fundamental {
 namespace geometric_algorithms {

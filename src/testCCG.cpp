@@ -1,4 +1,4 @@
-#include "connected_component_analysis.h"
+#include "geometric_algorithms.h"
 
 // Define a map of obstacles and free space
 /*
