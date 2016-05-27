@@ -3,8 +3,9 @@
 
 #include <iostream>
 
-namespace algorithm_fundamental
-{
+namespace algorithm_fundamental{
+namespace geometric_algorithms {
+
 	/// \brief Define the connectivity of neighboring cells
 	enum Connectivity { FIRST_ORDER=4, SECOND_ORDER=8 };
 
@@ -15,7 +16,7 @@ namespace algorithm_fundamental
 	/// \brief An implementation of the connected component analysis (or grouping) based on depth-
 	/// \first search.
 	/// \param[in] data Pointer to the input 2-d data matrix. The data matrix is a binary matrix.
-	/// \param[in] label Pointer to the input 2-d label matrix. The label matrix is zeros(rows, cols)
+	/// \param[in] label Pointer to the input 2-d label matrix. The label matrix is initially set to zeros(rows, cols)
 	/// \param[in] rows Number of rows
 	/// \param[in] cols Number of columns
 	void connected_component_analysis(int **data, int **label, int rows, int cols);
@@ -28,6 +29,8 @@ namespace algorithm_fundamental
 
 	/// \brief Show the elements of a 2-D matrix.
 	void show_matrix(int **matrix, int rows, int cols);
-} // algorithm_fundamental
+
+} // namespace geometric_algorithms
+} // namespace algorithm_fundamental
 
 #endif // _CONNECTED_COMPONENT_ANALYSIS_H__

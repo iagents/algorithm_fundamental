@@ -54,6 +54,5 @@ int main()
 		}
 	}
 
-	//algorithm_fundamental::connected_component_analysis((int **)data, (int **)label, 5, 5);
-	algorithm_fundamental::connected_component_analysis(data, label, 5, 5);
+	algorithm_fundamental::geometric_algorithms::connected_component_analysis(data, label, 5, 5);
 }
