@@ -72,5 +72,74 @@ namespace sorting_algorithms {
     }
   }
 
+  void merge_sort(int array[], int left, int right)
+  {
+    if (left < right)
+    {
+      // find the mid index
+      int mid = left + ((right-left)/2);
+
+      // do merge sort to the left, subarray
+      merge_sort(array, left, mid);
+      // do merge sort to the right, subarray
+      merge_sort(array, mid+1, right);
+      // then merge the results from sorting two subarrays
+      merge(array, left, mid, right);
+    }
+  }
+
+  void merge(int array[], int left, int mid, int right)
+  {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+    int array1[n1], array2[n2];
+
+    // copy the original array into two subarrays
+    for (int i=0; i < n1; i++)
+    {
+      array1[i] = array[left+i];
+    }
+
+    for (int i=0; i < n2; i++)
+    {
+      array2[i] = array[mid+1+i];
+    }
+
+    // Merge two subarrays into the original array
+    int i=0; // index for the first subarray
+    int j=0; // index for the second subarray
+    int k=left; // index of the original array
+
+    while (i < n1 && j < n2)
+    {
+      if (array1[i] <= array2[j])
+      {
+        array[k] = array1[i];
+        i++;
+      } else
+      {
+        array[k] = array2[j];
+        j++;
+      }
+      k++;
+    }
+
+    // copy the remaining elements of array1, if any
+    while (i < n1)
+    {
+      array[k] = array1[i];
+      i++;
+      k++;
+    }
+
+    // copy the remaining elements of array2, if any
+    while (j < n2)
+    {
+      array[k] = array2[j];
+      j++;
+      k++;
+    }
+  }
+
 } // namespace sorting_algorithms
 } // namespace algorithm_fundamental
